@@ -1,0 +1,15 @@
+# R session files
+.Rhistory
+.Rapp.history
+.RData
+.Ruserdata
+.Rproj.user/
+*.Rproj
+
+# Generated data files (regenerate with the app or the synthetic data script)
+*.csv
+!docs/sample_data/*.csv
+
+# OS files
+.DS_Store
+Thumbs.db
