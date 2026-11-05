@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # Segmentrix-R
-
+by BOGIATZIS ALEXANDROS
 Customer segmentation, RFM analysis and lifecycle analytics in R + Shiny.
 
 ## Results preview
@@ -49,9 +48,7 @@ segmentrix-r/
 ```
 
 ## 4. Using your own CSV
-
 Choose **Upload my CSV** in the sidebar. Required columns (names must match exactly):
-
 | Column | Example |
 |---|---|
 | CustomerID | C00017 |
@@ -64,14 +61,11 @@ One row per order, or one row per order line (several rows can share a Transacti
 Frequency counts distinct TransactionIDs and Monetary sums OrderValue).
 
 To create a sample file to test uploading, run in the R console:
-
 ```r
 source("R/synthetic_data.R")
 data.table::fwrite(generate_synthetic_transactions(2000), "sample_transactions.csv")
 ```
-
 ## 5. How the analysis works
-
 | Step | What happens | Where |
 |---|---|---|
 | Clean | Remove rows with missing values, refunds / zero values, exact duplicates | `clean_transactions()` |
@@ -84,7 +78,6 @@ data.table::fwrite(generate_synthetic_transactions(2000), "sample_transactions.c
 | Insights | Churn probability, revenue share, recommended action, written summary | `insights.R` |
 
 ### Design decisions worth knowing
-
 * **K starts at 3**, not 2. Silhouette often favours K = 2 ("good vs bad"), which is
   too coarse for marketing. Change `k_range` in `fit_segments()` if you disagree.
 * **Migration uses snapshots**, not two isolated windows. RFM computed inside a 90-day window
@@ -99,17 +92,10 @@ data.table::fwrite(generate_synthetic_transactions(2000), "sample_transactions.c
   `mclust::Mclust(x, G = 3:8)` inside `fit_segments()` and use `$classification`.
 
 ## 6. Troubleshooting
-
 | Problem | Fix |
-|---|---|
 | `there is no package called 'xyz'` | Run `install.packages("xyz")` |
 | `could not find function "nav_panel"` | bslib is too old: `install.packages("bslib")` |
 | `unexpected '>'` | R older than 4.1: update R |
 | Upload shows a red message | The message names the missing column |
 | Slow with very large files | Silhouette is sampled to 3000 rows; PCA plot to 5000 points |
-=======
-# segmentrix-r
-# segmentrix-r
-# segmentrix-r
-# segmentrix-r
->>>>>>> 93a9cba8fddef1a661f90a06da7e21505c3c9bbc
+
