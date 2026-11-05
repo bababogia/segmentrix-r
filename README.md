@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Segmentrix-R
 
 Customer segmentation, RFM analysis and lifecycle analytics in R + Shiny.
@@ -106,3 +107,9 @@ data.table::fwrite(generate_synthetic_transactions(2000), "sample_transactions.c
 | `unexpected '>'` | R older than 4.1: update R |
 | Upload shows a red message | The message names the missing column |
 | Slow with very large files | Silhouette is sampled to 3000 rows; PCA plot to 5000 points |
+=======
+# segmentrix-r
+# segmentrix-r
+# segmentrix-r
+# segmentrix-r
+>>>>>>> 93a9cba8fddef1a661f90a06da7e21505c3c9bbc
